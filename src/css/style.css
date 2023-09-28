@@ -1,0 +1,129 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  max-width: 1440px;
+  background: url("../images/bg-desktop.svg") center center no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "huddle-page about"
+    "footer footer";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto auto;
+}
+.header {
+  grid-area: header;
+}
+.header a img {
+  margin-top: 50px;
+}
+.huddle-page {
+  grid-area: huddle-page;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.huddle-page img {
+  width: 100%;
+  height: auto;
+}
+.about {
+  font-family: "Poppins", sans-serif;
+  grid-area: about;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about .info {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.about .info h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: #fff;
+  margin: 15px;
+}
+.about .info p {
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: #fff;
+  margin: 15px;
+}
+.about .info .btn-register {
+  margin: 15px;
+  align-self: flex-start;
+  font-size: 1.7rem;
+  padding: 10px 40px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.about .info .btn-register:hover {
+  color: #fff;
+  background-color: hsl(300, 69%, 71%);
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer nav ul {
+  display: flex;
+}
+.footer nav ul li {
+  margin: 20px;
+}
+.footer .icon i {
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.footer .icon {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 5px;
+}
+.footer .icon:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
+@media (max-width: 768px) {
+  body {
+    margin: auto 20px;
+    background: url("../images/bg-mobile.svg") center center no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    grid-template-areas:
+      "header"
+      "huddle-page"
+      "about"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .huddle-page {
+    margin-top: 50px;
+  }
+  .about .info {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .info p{
+    font-size: 2rem;
+  }
+  .about .info .btn-register {
+    align-self: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
