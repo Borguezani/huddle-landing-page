@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+  body {
+    margin: auto 20px;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("../images/bg-mobile.svg");
+    background-position-y: top;
+    grid-template-areas:
+      "header"
+      "huddle-page"
+      "about"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr 2fr;
+  }
+  .header a img {
+    margin-top: 20px;
+  }
+  .huddle-page {
+    margin-top: 20px;
+  }
+  .about .info {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+  }
+  .about .info h1 {
+    font-size: 2.5rem;
+  }
+  .about .info p {
+    font-size: 2rem;
+  }
+  .about .info .btn-register {
+    align-self: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 475px) {
+  .header a img {
+    max-width: 160px;
+  }
+  .about .info p {
+    font-size: 1.8rem;
+  }
+  .footer {
+    align-items: flex-end;
+  }
+  .about .info h1 {
+    margin: 10px;
+  }
+}

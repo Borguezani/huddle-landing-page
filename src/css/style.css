@@ -39,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  max-width: 620px;
 }
 .about .info {
   margin: 30px;
@@ -60,10 +61,11 @@ body {
 .about .info .btn-register {
   margin: 15px;
   align-self: flex-start;
-  font-size: 1.7rem;
-  padding: 10px 40px;
+  font-size: 2rem;
+  padding: 10px 70px;
   background-color: #fff;
   border-radius: 30px;
+  transition: 0.5s;
 }
 .about .info .btn-register:hover {
   color: #fff;
@@ -77,53 +79,26 @@ body {
 .footer nav ul {
   display: flex;
 }
-.footer nav ul li {
+.footer nav ul li a{
   margin: 20px;
+  height: 44px;
+  width: 44px;
+  text-align: center;
 }
-.footer .icon i {
-  font-size: 2rem;
-  margin: 5px;
-}
-
 .footer .icon {
+  transition: 0.4s;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 50%;
   display: inline-block;
   padding: 5px;
 }
+.footer .icon i {
+  font-size: 2rem;
+  margin: 5px; 
+}
 .footer .icon:hover {
   color: hsl(300, 69%, 71%);
   border-color: hsl(300, 69%, 71%);
 }
-@media (max-width: 768px) {
-  body {
-    margin: auto 20px;
-    background: url("../images/bg-mobile.svg") center center no-repeat;
-    background-color: hsl(257, 40%, 49%);
-    grid-template-areas:
-      "header"
-      "huddle-page"
-      "about"
-      "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .huddle-page {
-    margin-top: 50px;
-  }
-  .about .info {
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .about .info p{
-    font-size: 2rem;
-  }
-  .about .info .btn-register {
-    align-self: center;
-  }
-  .footer {
-    justify-content: center;
-  }
-}
+
