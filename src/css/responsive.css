@@ -1,9 +1,6 @@
 @media (max-width: 768px) {
   body {
     margin: auto 20px;
-    background-color: hsl(257, 40%, 49%);
-    background-image: url("../images/bg-mobile.svg");
-    background-position-y: top;
     grid-template-areas:
       "header"
       "huddle-page"
@@ -38,6 +35,10 @@
   }
 }
 @media (max-width: 475px) {
+  body{
+    background: url("../images/bg-mobile.svg") center top no-repeat;
+    background-color: hsl(257, 40%, 49%);
+  }
   .header a img {
     max-width: 160px;
   }
